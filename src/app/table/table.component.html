@@ -1,0 +1,26 @@
+<div class="app-table">
+  <div class="app-table__header">
+    <ng-container *ngFor="let column of columns; let i = index">
+      <ng-container
+        *ngTemplateOutlet="
+          column.template;
+          context: { cellModel: { isHeader: true, dataItem: null } }
+        "
+      ></ng-container>
+    </ng-container>
+  </div>
+  <div class="app-table__rows">
+    <div *ngFor="let dataItem of data">
+      <div class="app-table__row">
+        <ng-container *ngFor="let column of columns; let i = index">
+          <ng-container
+            *ngTemplateOutlet="
+              column.template;
+              context: { cellModel: { isHeader: false, dataItem: dataItem } }
+            "
+          ></ng-container>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>
