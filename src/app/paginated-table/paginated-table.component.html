@@ -1,4 +1,12 @@
 <div class="app-paginated-table">
-  <app-table></app-table>
+  <app-table [data]="data">
+    <ng-container *ngFor="let column of columns; let i = index">
+      <ng-container *appTableColumn="let cellModel = cellModel">
+        <ng-container
+          *ngTemplateOutlet="column.template; context: { cellModel: cellModel }"
+        ></ng-container>
+      </ng-container>
+    </ng-container>
+  </app-table>
   <app-pager></app-pager>
 </div>

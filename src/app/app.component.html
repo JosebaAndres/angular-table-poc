@@ -14,7 +14,7 @@
   ></app-table-cell>
 </app-table>
 <h1>Paginated table</h1>
-<app-paginated-table>
+<app-paginated-table [data]="data">
   <app-table-cell
     *appTableColumn="let cellModel = cellModel"
     [cellModel]="cellModel"
