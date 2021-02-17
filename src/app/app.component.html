@@ -1,3 +1,4 @@
+<h1>Table</h1>
 <app-table [data]="data">
   <app-table-cell
     *appTableColumn="let cellModel = cellModel"
@@ -12,3 +13,18 @@
     [title]="'Description'"
   ></app-table-cell>
 </app-table>
+<h1>Paginated table</h1>
+<app-paginated-table>
+  <app-table-cell
+    *appTableColumn="let cellModel = cellModel"
+    [cellModel]="cellModel"
+    [path]="'code'"
+    [title]="'Code'"
+  ></app-table-cell>
+  <app-table-cell
+    *appTableColumn="let cellModel = cellModel"
+    [cellModel]="cellModel"
+    [path]="'description'"
+    [title]="'Description'"
+  ></app-table-cell>
+</app-paginated-table>

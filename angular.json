@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "angular-table-poc"
+  "defaultProject": "angular-table-poc",
+  "cli": {
+    "analytics": "88a1fbf7-569b-4faa-8489-c6a94915bbc7"
+  }
 }
